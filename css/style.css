@@ -71,6 +71,13 @@ img {
   color: #fff;
   padding: 10px;
   margin: 0 5px;
+  transition: border-bottom-color 0.5s ease-in-out;
+  -webkit-transition: border-bottom-color 0.5s ease-in;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid;
+  border-bottom-color: #333;
 }
 
 .navbar .flex {
@@ -217,13 +224,36 @@ img {
   color: #333;
 }
 
-.btn-dark {
+.btn-dark,
+.bg-dark {
   background-color: var(--dark-color);
   color: #fff;
 }
 
 .text-center {
   text-align: center;
+}
+
+/* Text Sizes */
+
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
 }
 
 /* Margins */
@@ -343,4 +373,122 @@ img {
 .cli .grid > *:first-child {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+}
+
+/* Languages */
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  width: 100px;
+  height: 120px;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+  margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/* Social */
+
+.social i,
+nav a {
+  color: #fff;
+}
+
+.social a {
+  margin-left: 10px;
+}
+
+footer .grid-3 {
+  justify-items: center;
+}
+
+nav li {
+  line-height: 30px;
+}
+
+/* Media Query */
+/* ----------- */
+
+/* Tablets and umnder */
+
+@media (max-width: 768px) {
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  footer .grid-3 {
+    align-items: flex-end;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+    max-width: 80%;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .showcase-text h1 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .showcase p {
+    margin: 20px 30px;
+    text-align: justify;
+  }
+
+  footer .social i {
+    font-size: 25px;
+    margin: 5px;
+  }
 }
